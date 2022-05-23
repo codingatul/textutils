@@ -1,22 +1,25 @@
 
 import './App.css';
-// import About from './components/About';
+import About from './components/About';
 import Navbar from './components/Navbar';
 import Textarea from './components/Textarea';
 import React, { useState } from 'react';
 import Alert from './components/Alert';
-// import {
-//   BrowserRouter,
-//   Routes,
-//   Route,
-// } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light')
 
   const [enable, setEnable] = useState('Darkmode')
 
+  
+
   const toggle = () => {
+    
     if (mode === 'light') {
       setMode('dark')
       setEnable('Lightmode')
@@ -55,18 +58,18 @@ function App() {
 
   return (
     <>
-      <Navbar title="Textutils" about="AboutTextutils" mode={mode} toggle={toggle} enable={enable} />
+      {/* <Navbar title="Textutils" about="AboutTextutils" mode={mode} toggle={toggle} enable={enable} />
 
-      <Alert alert={alert} />
+      <Alert alert={alert} /> */}
 
         {/* <About /> */}
 
-      <div className="container my-3">
+      {/* <div className="container my-3">
         <Textarea heading="Enter value to change it" mode={mode} showAlert={showAlert} />
-      </div>
+      </div> */}
 
 
-      {/* <BrowserRouter>
+      <BrowserRouter>
 
         <Navbar title="Textutils" about="AboutTextutils" mode={mode} toggle={toggle} enable={enable} />
 
@@ -74,16 +77,16 @@ function App() {
 
         <div className="container my-3">
           <Routes>
-            <Route exact path="/about" element={<About />}>
+            <Route exact path="/about" element={<About mode={mode}/>}>
 
             </Route>
-            <Route exact path="/" element={<Textarea heading="Enter value to change it" mode={mode} showAlert={showAlert} />}>
+            <Route exact path="/" element={<Textarea heading="Textutils-Word Counter, Character Counter, Remove Extra Spaces" mode={mode} showAlert={showAlert} />}>
 
             </Route>
           </Routes>
         </div>
 
-      </BrowserRouter> */}
+      </BrowserRouter>
 
     </>
   );
