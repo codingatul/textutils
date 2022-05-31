@@ -1,0 +1,19 @@
+.card{
+    /* align-items: center; */
+    border: 3px solid lightgray;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    width: fit-content;
+}
+.cardbody{
+    /* text-align: center; */
+    padding: 10px;
+    
+}
+
+.button{
+    border-radius: 10px;
+    font-weight: 500;
+    /* background-color: lightseagreen; */
+}
